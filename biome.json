@@ -1,15 +1,62 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true,
-            "style": {
-            "useImportType": "off"
-          }
-		}
-	}
-}
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "vcs": {
+      "enabled": true,
+      "clientKind": "git",
+      "useIgnoreFile": true
+    },
+    "organizeImports": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true,
+      "rules": {
+        "recommended": true,
+        "style": {
+          "useImportType": "warn",
+          "useSelfClosingElements": "warn",
+          "noNonNullAssertion": "off"
+        },
+        "a11y": {
+          "noAutofocus": "off",
+          "useKeyWithClickEvents": "off"
+        },
+        "correctness": {
+          "useExhaustiveDependencies": "warn",
+          "noUnusedImports": "warn",
+          "useJsxKeyInIterable": "error"
+        }
+      }
+    },
+    "formatter": {
+      "lineWidth": 120,
+      "indentStyle": "space",
+      "indentWidth": 2
+    },
+    "javascript": {
+      "formatter": {
+        "jsxQuoteStyle": "double",
+        "trailingCommas": "none",
+        "quoteStyle": "single"
+      }
+    },
+    "json": {
+      "formatter": {
+        "trailingCommas": "none"
+      }
+    },
+    "overrides": [
+      {
+        "include": [
+          "apps/api/**/*",
+          "apps/spa/**/*"
+        ],
+        "formatter": { "enabled": false },
+        "linter": { "enabled": false },
+        "organizeImports": {
+          "enabled": false
+        }
+      }
+    ]
+  }
+  
