@@ -100,6 +100,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@pbr1111/vite-plugin-biome':
+        specifier: ^1.1.2
+        version: 1.1.2(@biomejs/biome@1.8.3)(vite@5.4.1)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1583,6 +1586,16 @@ packages:
       node-fetch: 2.7.0
     transitivePeerDependencies:
       - encoding
+
+  /@pbr1111/vite-plugin-biome@1.1.2(@biomejs/biome@1.8.3)(vite@5.4.1):
+    resolution: {integrity: sha512-05cTuSrZXNLvYsV9Cu+UWB+rm+5ogHwG5iRWaAHV3RgmIq6VgQ38yBw20nwq1uoRryHmutgfEflB7+CEhsyPZQ==}
+    peerDependencies:
+      '@biomejs/biome': '>=1'
+      vite: '>=4'
+    dependencies:
+      '@biomejs/biome': 1.8.3
+      vite: 5.4.1
+    dev: true
 
   /@rollup/rollup-android-arm-eabi@4.21.2:
     resolution: {integrity: sha512-fSuPrt0ZO8uXeS+xP3b+yYTCBUd05MoSp2N/MFOgjhhUhMmchXlpTQrTpI8T+YAwAQuK7MafsCOxW7VrPMrJcg==}
