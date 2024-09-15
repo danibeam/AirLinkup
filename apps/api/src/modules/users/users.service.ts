@@ -10,4 +10,8 @@ export class UsersService {
         this.users.push(user)
         return user
     }
+
+    findAll(): User[] {
+        return this.users
+    }
 }

@@ -3,10 +3,10 @@ import type { ReactElement } from "react";
 const App = (): ReactElement => {
 	return (
 		<div>
-			<button
+			    <button
 				type="button"
 				onClick={async () => {
-					const response = await fetch("/api/");
+					const response = await fetch("/api/users");
 					const data = await response.json();
 					console.info(data);
 				}}
